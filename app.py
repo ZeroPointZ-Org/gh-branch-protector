@@ -47,7 +47,8 @@ def webhook():
                             "title": "New Protection Added",
                             "body": "Dont Panic @"
                             + user
-                            + "! A new branch protection was added to the default branch.",
+                            + "! A new branch protection was added to the default branch."
+                            + json.dumps(branch_protection),
                         }
                         session = requests.session()
                         session.auth = (user, cred)
