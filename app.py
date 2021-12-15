@@ -3,7 +3,7 @@ import time
 
 import json
 import requests
-from flask import Flask, request  # pylint: disable=import-error
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -47,8 +47,7 @@ def webhook():
                             "title": "New Protection Added",
                             "body": "Dont Panic @"
                             + user
-                            + "! A new branch protection was added to the default branch."
-                            + branch_protection,
+                            + "! A new branch protection was added to the default branch.",
                         }
                         session = requests.session()
                         session.auth = (user, cred)
