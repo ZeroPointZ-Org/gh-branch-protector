@@ -4,7 +4,7 @@
 
 ### Description:
 
-When a new repository is created within your GitHub Organization - automatically set branch protections of the default branch. Initiated from a webhook event, processed by this simple web service, and notified with @ username mention in a new issue. The message details the key/value details of the protection parameters. (Default branches assumed to be named `main`)
+When a new repository is created within your GitHub Organization - automatically set branch protections of the default branch. Initiated from a webhook event, processed by this simple web service, and notified with @ username mention in a new issue. The message includes the key/value details of the protection parameters. (Default branches assumed to be named `main`)
 
 ![Issues](/assets/images/gh_issues_detail.png)
 
