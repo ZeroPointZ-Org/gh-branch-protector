@@ -6,26 +6,22 @@
 
 When a new repository is created within your GitHub Organization - automatically set branch protections of the default branch. Initiated from a webhook event, processed by this simple web service, and notified with @ username mention in a new issue. The message details the key/value details of the protection parameters. (Default branches assumed to be named `main`)
 
-![New repo](/assets/images/create_new_branch.png)
-
-![Webhook](/assets/images/gh_webhook.png)
-
-![Issues](/assets/images/gh_issues/detail.png)
+![Issues](/assets/images/gh_issues_detail.png)
 
 ## Setup
 
 The following prerequisite components are needed to support the webhook/webservice:
-- ![GitHub account](https://github.com)
-- ![GitHub Organization](https://docs.github.com/en/organizations)
-- ![Python3 v3.7.0+](https://www.python.org/downloads/)
-- ![Flask v1.1.1](https://flask.palletsprojects.com/en/1.1.x/installation/)
-- ![Ngrok v2.3.40](https://dashboard.ngrok.com/signup)
+- [GitHub account](https://github.com)
+- [GitHub Organization](https://docs.github.com/en/organizations)
+- [Python3 v3.7.0+](https://www.python.org/downloads/)
+- [Flask v1.1.1](https://flask.palletsprojects.com/en/1.1.x/installation/)
+- [Ngrok v2.3.40](https://dashboard.ngrok.com/signup)
 
 ## Usage
 
 ### GitHub Account and Authorization
 
-- Create a PAT (personal access token) for authentication. ![Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- Create a PAT (personal access token) for authentication. [Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 - Select the repository and admin scopes when creating the Token
 
@@ -39,12 +35,12 @@ The following prerequisite components are needed to support the webhook/webservi
 ### Python / Flask / Ngrok
 
 - Install Python based on the instructions related to your operating system
-  - ![Python3 v3.7.0+](https://www.python.org/downloads/)
+  - [Python3 v3.7.0+](https://www.python.org/downloads/)
   - Install Flask and required dependancies
     `pip install -r requirements.txt`
 
-- Create a free account for ![Ngrok](https://dashboard.ngrok.com/signup)
-  - install ngrok ![Install Ngrok](https://ngrok.com/download)
+- Create a free account for [Ngrok](https://dashboard.ngrok.com/signup)
+  - install ngrok [Install Ngrok](https://ngrok.com/download)
   - log-in to the Ngrok dashboard in your browser
 
 ### Binding Flask and Ngrok
@@ -62,6 +58,8 @@ The following prerequisite components are needed to support the webhook/webservi
 
 ### GitHub Organization - Webhook
 
+![Webhook](/assets/images/gh_webhook.png)
+
 - Log-in to the GitHub Organization account
     - Navigate to `Settings` > `Webhooks`
     - Click the `add webhook` button
@@ -74,6 +72,8 @@ The following prerequisite components are needed to support the webhook/webservi
     - Click the Save/Update button
 
 ### Create a new repository in the GitHub Organization account
+
+![New repo](/assets/images/create_new_branch.png)
 
 - Click the `New` button to create a new repository
     - Assign a name to the repository
@@ -105,12 +105,10 @@ Once you click the `Create repository` button in the previous step, the webhook 
 
 ## Attributions
 
-- Github Satellite 2020: Building GitHub Integrations with webhooks and REST
-https://www.youtube.com/watch?v=wcxOJq9YemE&list=FL11qguAv2b2obKLbhn_1i_g
+- [Github Satellite 2020: Building GitHub Integrations with webhooks and REST](https://www.youtube.com/watch?v=wcxOJq9YemE&list=FL11qguAv2b2obKLbhn_1i_g)
 
 - [GitHub APIv3 documentation](https://developer.github.com/v3/)
 
 - [Code example](https://github.com/zkoppert/Auto-branch-protect)
 
-- Building Tools with GitHub by Chris Dawson (with Ben Straub) - O'Reilly books
-
+- [Building Tools with GitHub by Chris Dawson (and Ben Straub) - O'Reilly books](https://www.oreilly.com/library/view/building-tools-with/9781491933497/)
