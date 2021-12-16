@@ -40,7 +40,7 @@ The following prerequisite components are needed to support the webhook/webservi
     `pip install -r requirements.txt`
 
 - Create a free account for [Ngrok](https://dashboard.ngrok.com/signup)
-  - install ngrok [Install Ngrok](https://ngrok.com/download)
+  - [Install Ngrok](https://ngrok.com/download)
   - log-in to the Ngrok dashboard in your browser
 
 ### Binding Flask and Ngrok
@@ -48,8 +48,8 @@ The following prerequisite components are needed to support the webhook/webservi
 - Open 2 terminal sessions and navigate to the base of this repo
 
 - Run the flask server in the first terminal session 
-    `flask run --host=0.0.0.0 &`
-    *Flask runs in Development Server mode by defualt, not intended for production*
+    - `flask run --host=0.0.0.0 &`
+    - *Flask runs in Development Server mode by defualt, not intended for production*
 
 - Run Ngrok in the second terminal session
     `./ngrok http 5000 &`
@@ -67,8 +67,7 @@ The following prerequisite components are needed to support the webhook/webservi
     - Select the option `application/json` in the content type drop-down
     - Select the `Let me select individual events` radio button
     - Select the `Repositries` events in the list
-    - Select the `Active` event trigger button at the bottom of the list 
-      *Active should already be enabled by default*
+    - Select the `Active` event trigger button at the bottom of the list
     - Click the Save/Update button
 
 ### Create a new repository in the GitHub Organization account
